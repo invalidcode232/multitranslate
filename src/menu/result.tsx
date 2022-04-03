@@ -14,7 +14,6 @@ class ResultMenu extends Component<Props, State> {
             <div>
                 <Flex>
                     <LanguageCard />
-                    <LanguageCard />
                 </Flex>
             </div>
         )
