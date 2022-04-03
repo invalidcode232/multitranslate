@@ -11,7 +11,7 @@ type State = {
 
 class Main extends Component<Props, State> {
   state = {
-    showResult: true,
+    showResult: false,
   }
 
   handleClick = () => {
@@ -36,7 +36,7 @@ class Main extends Component<Props, State> {
 
           <Spacer mt={'6'} />
 
-          <InputMenu/>
+          <InputMenu clickCallback={this.handleClick.bind(this)}/>
 
           {result}
 

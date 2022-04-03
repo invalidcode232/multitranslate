@@ -1,23 +1,11 @@
-import { Flex } from '@chakra-ui/react'
-import React, { Component } from 'react'
-import LanguageCard from '../components/languagecard'
+import React from 'react'
 
 type Props = {}
 
-type State = {}
-
-class ResultMenu extends Component<Props, State> {
-    state = {}
-
-    render() {
-        return (
-            <div>
-                <Flex>
-                    <LanguageCard />
-                </Flex>
-            </div>
-        )
-    }
+function ResultMenu({}: Props) {
+  return (
+    <div>ResultMenu</div>
+  )
 }
 
 export default ResultMenu
