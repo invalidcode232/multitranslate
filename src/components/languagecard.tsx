@@ -1,12 +1,20 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Text, Spacer } from '@chakra-ui/react'
 import React from 'react'
 
-type Props = {}
+type Props = {
+    langName: String,
+    index?: Number,
+    isLast?: Boolean,
+    translation: String,
+}
 
-function LanguageCard({ }: Props) {
+function LanguageCard({ langName, index, translation, isLast }: Props) {
     return (
-        <Box>
-            <h1>Hello</h1>
+        <Box p={'4'} bgColor={'box'} borderRadius={'5'} width={'100%'}>
+            <Text color={'gray'}>{isLast ? `Result` : `Language #${index}`}</Text>
+            <Text fontSize={'2xl'}>{langName}</Text>
+            <Spacer my={'2'}/>
+            <Text>{translation}</Text>
         </Box>
     )
 }

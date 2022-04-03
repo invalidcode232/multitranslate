@@ -13,4 +13,5 @@ languages.forEach(language => {
 });
 
 let json = JSON.stringify(languages_obj);
-console.log(json)
+
+fs.writeFileSync(path.join(__dirname, 'language_parsed.json'), json);

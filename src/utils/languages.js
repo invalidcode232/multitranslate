@@ -1,4 +1,4 @@
-[
+let languages = [
     {
         "name": "Afrikaans",
         "code": "af"
@@ -432,3 +432,5 @@
         "code": "zu"
     }
 ]
+
+export default languages;
