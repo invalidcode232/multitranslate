@@ -40,7 +40,12 @@ function multitranslate(text: String, languageList: Array<any>) {
   return new Promise(async (resolve, reject) => {
     for (let i = 0; i < languageList.length; i++) {
       const language = languageList[i]
-      let result = await axios.get(encodeURI(`http://localhost:8000/translate?text=${curText}&language=${language.code}`))
+      let language_code = language.code
+
+      curText = encodeURIComponent(curText as string)
+      language_code = encodeURIComponent(language_code as string)
+
+      let result = await axios.get(`/translate?text=${curText}&language=${language.code}`)
       // let result = await axios.get(encodeURI(`https://clients5.google.com/translate_a/t?client=dict-chrome-ex&sl=auto&tl=${language.code}&q=${curText}`))
       curText = result.data[0]
       data.push({
