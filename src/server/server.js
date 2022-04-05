@@ -2,9 +2,11 @@
 
 const express = require('express');
 const cors = require('cors');
+const path = require('path');
 const app = express();
 
 app.use(cors());
+app.use(express.static(path.join(__dirname, '../../build')));
 
 const axios = require('axios').default;
 
@@ -17,6 +19,10 @@ app.get('/translate', (req, res) => {
         res.send(result['data']);
     })
 });
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../../build/', 'index.html'))
+})
 
 app.listen(8000, () => {
     console.log('Server running on port 8000');
