@@ -1,11 +1,11 @@
 // Debug server to test the translation API without CORS issues
 
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const path = require('path');
 const app = express();
 
-app.use(cors());
+// app.use(cors());
 app.use(express.static(path.join(__dirname, '../../build')));
 
 const axios = require('axios').default;
