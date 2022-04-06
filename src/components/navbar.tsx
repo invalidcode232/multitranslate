@@ -3,9 +3,9 @@ import React from 'react'
 import { ColorModeSwitcher } from './colorswitcher'
 
 
-type Props = {}
+// type Props = {}
 
-function Navbar({ }: Props) {
+function Navbar() {
     return (
         <div>
             <Container maxW={'container.xl'} marginY={'3'}>

@@ -1,4 +1,4 @@
-import { Flex, Center } from '@chakra-ui/layout'
+import { Flex } from '@chakra-ui/layout'
 import React from 'react'
 import LanguageCard from '../components/languagecard'
 
